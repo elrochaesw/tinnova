@@ -1,19 +1,23 @@
 package br.com.exercicios;
 
+/**
+ * Classe que realiza o cálculo do fatorial.
+ * @author Evandro Rocha.
+ * @email evandro.esw@gmail.com
+ */
 public class Fatorial {
 
-    public static void main(String[] args) {
-        int numero = 5; // Insira o número desejado aqui
-        long resultado = fatorial(numero);
-
-        System.out.printf("O fatorial de %d é: %d", numero, resultado);
-    }
-
-    public static long fatorial(int numero) {
+    /**
+     * Método que calcula o Fatorial.
+     * Você deve utilizá-lo para realizar o cálculo fatorial.
+     * @param numero número para realizar o fatorial sobre ele.
+     * @author Evandro Rocha.
+     */
+    public long calculaFatorial(int numero) {
         if (numero <= 1) {
             return 1;
         } else {
-            return numero * fatorial(numero - 1);
+            return numero * calculaFatorial(numero - 1);
         }
     }
 }
